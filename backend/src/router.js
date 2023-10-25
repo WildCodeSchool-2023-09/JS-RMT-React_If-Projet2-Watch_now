@@ -1,4 +1,5 @@
 const express = require("express");
+const client = require("../database/client");
 
 const router = express.Router();
 
@@ -10,7 +11,15 @@ const router = express.Router();
 
 // Route to get a list of items
 router.get("/items", (req, res) => {
-  res.send("Ma réponse au client");
+  client
+    .query("select * from item")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 });
 
 // Route to get a specific item by ID
