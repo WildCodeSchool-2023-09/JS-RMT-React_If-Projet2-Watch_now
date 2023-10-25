@@ -3,9 +3,12 @@ import "./App.css";
 
 function App() {
   const load = () => {
-    axios.get("http://localhost:3310/api/items").then((result) => {
-      console.info(result.data);
-    });
+    axios
+      .get("http://localhost:3310/api/items")
+      .then((result) => {
+        console.info(result.data);
+      })
+      .catch((err) => console.error(err));
   };
   return (
     <div className="App">
