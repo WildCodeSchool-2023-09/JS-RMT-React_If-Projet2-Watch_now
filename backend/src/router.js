@@ -8,7 +8,8 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import itemControllers module for handling item-related operations
-// Route to get a list of items
+const itemControllers = require("./controllers/itemControllers");
+// Route to get a list of movies
 router.get("/movies", (req, res) => {
   client
     .query("select * from movie")
@@ -22,6 +23,21 @@ router.get("/movies", (req, res) => {
 });
 // Route to get a specific item by ID
 // router.get("/items/:id", itemControllers.read);
+router.get("/movies/:id", itemControllers.read, (req, res) => {
+  client
+    .query("select * from movie where id = ?")
+    .then(([movie]) => {
+      if (movie[0] != null) {
+        res.json(movie[0]);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
 
 // Route to add a new item
 // router.post("/items", itemControllers.add);
