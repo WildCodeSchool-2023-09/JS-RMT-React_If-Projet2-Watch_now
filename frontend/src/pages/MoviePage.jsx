@@ -7,14 +7,13 @@ function MoviePage() {
   return (
     <div>
       <Link to="/">Home</Link>
-      {movie.map((movies) => {
-        return (
-          <div>
-            <h1>{movies.title}</h1>
-            <img src={movies.poster_path} alt={movies.title} />
-          </div>
-        );
-      })}
+      <h1>Details du film</h1>
+      <div>
+        <Link to={`/movies/${movie.id}`}>
+          <img src={movie.poster_path} alt={movie.title} />
+        </Link>
+        <h2>{movie.title}</h2>
+      </div>
     </div>
   );
 }
