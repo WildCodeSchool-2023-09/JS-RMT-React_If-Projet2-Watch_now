@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/all-movies",
+    path: "/movies",
     element: <AllMovies />,
     loader: () => {
       return axios
@@ -23,11 +23,11 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/movie-page/:movieId",
+    path: "/movies/:movieId",
     element: <MoviePage />,
     loader: () => {
       return axios
-        .get("http://localhost:3310/api/movies")
+        .get("http://localhost:3310/api/movies/")
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },

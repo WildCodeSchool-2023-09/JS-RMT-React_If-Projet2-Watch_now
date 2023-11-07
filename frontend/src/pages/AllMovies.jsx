@@ -3,19 +3,19 @@ import "../style/AllMovies.css";
 import { useLoaderData, Link } from "react-router-dom";
 
 function AllMovies() {
-  const movie = useLoaderData();
+  const movies = useLoaderData();
 
   return (
     <div>
       <Link to="/">Home</Link>
       <h1>Liste des films</h1>
-      {movie.map((movies) => {
+      {movies.map((movie) => {
         return (
           <div>
-            <Link to="/movie-page/:movieId">
-              <img src={movies.poster_path} alt={movies.title} />
+            <Link to={`/movies/${movie.id}`}>
+              <img src={movie.poster_path} alt={movie.title} />
             </Link>
-            <h2>{movies.title}</h2>
+            <h2>{movie.title}</h2>
           </div>
         );
       })}
