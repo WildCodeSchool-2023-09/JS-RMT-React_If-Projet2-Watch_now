@@ -1,12 +1,13 @@
 import React from "react";
 import { useLoaderData, Link } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 function MoviePage() {
   const movie = useLoaderData();
 
   return (
     <div>
-      <Link to="/">Home</Link>
+      <NavBar />
       <h1>Details du film</h1>
       <div>
         <Link to={`/movies/${movie.id}`}>

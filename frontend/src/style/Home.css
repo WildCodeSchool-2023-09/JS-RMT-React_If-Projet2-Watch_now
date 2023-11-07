@@ -1,0 +1,20 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  background: #0f1014;
+}
+
+/* MOBILE */
+@media screen and (max-width: 400px) {
+}
+body {
+}

@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../style/Home.css";
+
+import NavBar from "../components/NavBar";
 
 function Home() {
   return (
-    <div>
-      <h1>C'est moi le Home</h1>
-      <br />
-      <Link to="/movies">Browse Movies</Link>
-    </div>
+    <>
+      <NavBar />
+      <div>
+        <h1>C'est moi le Home</h1>
+        <br />
+      </div>
+    </>
   );
 }
 

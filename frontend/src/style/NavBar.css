@@ -1,0 +1,53 @@
+/* DESKTOP */
+
+@media screen and (min-width: 1200px) {
+  .nav-logo {
+    width: 20px;
+    margin-right: 100px;
+    position: relative;
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px;
+    text-decoration: none;
+    overflow: hidden; /* Cache le débordement du pseudo-élément */
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .nav-menu a {
+    position: relative;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  /* HOVER */
+
+  .nav-logo:hover {
+    background-color: #fe0a3d; /* Nouvelle couleur de fond au survol */
+    transition: background-color 0.3s; /* Transition fluide de la couleur de fond */
+  }
+
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fe0a3d;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .nav-menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
