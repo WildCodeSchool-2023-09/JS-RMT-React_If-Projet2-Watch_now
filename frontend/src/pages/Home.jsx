@@ -1,21 +1,14 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function AllProduct() {
-  const movie = useLoaderData();
+function Home() {
   return (
-    <div className="App">
-      <h1>Liste des films</h1>
-      {movie.map((movies) => {
-        return (
-          <div>
-            <img src={movies.poster_path} alt={movies.title} />
-            <h2>{movies.title}</h2>
-          </div>
-        );
-      })}
+    <div>
+      <h1>C'est moi le Home</h1>
+      <br />
+      <Link to="/all-movies">Browse Movies</Link>
     </div>
   );
 }
 
-export default AllProduct;
+export default Home;
