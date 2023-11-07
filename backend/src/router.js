@@ -7,8 +7,8 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-// Import itemControllers module for handling item-related operations
-const itemControllers = require("./controllers/itemControllers");
+// Import movieControllers module for handling movie-related operations
+const movieControllers = require("./controllers/movieControllers");
 // Route to get a list of movies
 router.get("/movies", (req, res) => {
   client
@@ -21,9 +21,9 @@ router.get("/movies", (req, res) => {
       res.sendStatus(500);
     });
 });
-// Route to get a specific item by ID
-// router.get("/items/:id", itemControllers.read);
-router.get("/movies/:id", itemControllers.read, (req, res) => {
+// Route to get a specific movie by ID
+// router.get("/movies/:id", movieControllers.read);
+router.get("/movies/:id", movieControllers.read, (req, res) => {
   client
     .query("select * from movie where id = ?")
     .then(([movie]) => {
@@ -39,8 +39,8 @@ router.get("/movies/:id", itemControllers.read, (req, res) => {
     });
 });
 
-// Route to add a new item
-// router.post("/items", itemControllers.add);
+// Route to add a new movie
+// router.post("/movies", movieControllers.add);
 
 /* ************************************************************************* */
 
