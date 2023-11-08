@@ -7,10 +7,7 @@ function Home() {
   return (
     <>
       <NavBar />
-      <div>
-        <h1>C'est moi le Home</h1>
-        <br />
-      </div>
+      <div />
     </>
   );
 }
