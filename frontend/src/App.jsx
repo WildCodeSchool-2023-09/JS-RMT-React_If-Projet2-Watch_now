@@ -1,5 +1,6 @@
 import axios from "axios";
 import "./App.css";
+import Contact from "./components/Contact";
 import AllProduct from "./pages/AllProduct";
 import OneProduct from "./pages/OneProduct";
 
@@ -19,6 +20,7 @@ function App() {
       </button>
       <AllProduct />
       <OneProduct />
+      <Contact />
     </div>
   );
 }
