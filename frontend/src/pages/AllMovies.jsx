@@ -1,12 +1,14 @@
 import React from "react";
 import "../style/AllMovies.css";
 import { useLoaderData, Link } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 function AllMovies() {
   const movies = useLoaderData();
 
   return (
     <div>
+      <NavBar />
       <h1>Liste des films</h1>
       {movies.map((movie) => {
         return (
