@@ -4,49 +4,50 @@
   }
 }
 
-.container {
-  background-color: white;
+.contactContainer {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 15rem;
-  border-radius: 5%;
 }
 
-form {
+.contactContainer form {
+  width: 15rem;
+  margin: auto;
   display: grid;
   margin-top: 5%;
 }
 
-h4 {
+.contactContainer input,
+.contactContainer textarea {
+  background-color: #090a0e;
+  color: white;
+  text-align: center;
+  margin: 1.1rem 0;
+  padding: 0.2px auto;
+  border-radius: 5px;
+  border: #090a0e;
+}
+
+.contactContainer ::placeholder {
+  color: white;
+}
+
+.contactBtn {
   display: flex;
   justify-content: center;
+  border-radius: 10px;
+  background-color: #fe0a3d;
+  color: white;
+  padding: 0.3rem;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-textarea {
-  display: flex;
-  flex-direction: column;
-
-  resize: both;
-  min-width: 100px;
-  min-height: 100px;
-  min-width: 100px;
-  max-height: 200px;
-}
-
-input[type="submit" i] {
-  align-items: center;
-  margin-right: 85px;
-  margin-left: 85px;
-  background-color: rgb(211, 21, 84);
-  padding: 4%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 30%;
-}
-
-label {
+.contactContainer H4 {
   display: flex;
   justify-content: center;
-  font-size: larger;
-  color: black;
+  color: white;
+}
+
+button {
 }

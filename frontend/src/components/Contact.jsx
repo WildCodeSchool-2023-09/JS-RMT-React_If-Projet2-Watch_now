@@ -2,36 +2,21 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="container">
+    <div className="contactContainer">
       <h4>Contact form </h4>
       <form>
-        <label>
-          Lastname
-          <input type="text" name="lastname" placeholder="Last name" />
-        </label>
-        <label>
-          Firstname
-          <input type="text" name="firstname" placeholder="First name" />
-        </label>
+        <input type="text" name="name" placeholder="Name" />
 
-        <label>
-          Subject
-          <input
-            type="text"
-            name="subject"
-            placeholder="The subject of your message"
-          />
-        </label>
+        <input type="email" name="email" placeholder="Mail" />
 
-        <label>
-          Email
-          <input type="email" name="email" placeholder="Your email" />
-        </label>
+        <input type="text" name="subject" placeholder="Subject" />
 
-        <label>
-          Message
-          <textarea name="subject" placeholder="Your message" />
-        </label>
+        <textarea
+          name="subject"
+          placeholder="Write your message here"
+          rows="8"
+          cols="50"
+        />
 
         <div className="contactBtn">
           <button type="submit">Send</button>
