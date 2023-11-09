@@ -7,7 +7,6 @@ function NavbarModal() {
     <div>
       <nav id="nav-menu-modal">
         <NavLink to="/movies">Movies</NavLink>
-        <NavLink to="/mylist">MyList</NavLink>
       </nav>
     </div>
   );
