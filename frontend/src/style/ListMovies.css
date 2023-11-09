@@ -1,0 +1,149 @@
+.movie {
+  border-radius: 5px;
+}
+
+h1 {
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-size: 10px;
+}
+
+/* MOBILE */
+@media screen and (max-width: 490px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .movie {
+    height: 350px;
+    border-radius: 10px;
+  }
+  .display-movies {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .movie {
+    height: 190px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 50px;
+  }
+
+  .display-movies {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+}
+
+/* TABLETTE */
+@media screen and (min-width: 620px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .movie {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .movie {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .movie {
+    margin-bottom: 5px;
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 20px;
+    margin: 50px;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .display-movies {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .movie {
+    margin-bottom: 10px;
+  }
+  .display-movies {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .movie {
+    margin-bottom: 10px;
+  }
+  .display-movies {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #list-movies {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+  }
+}
