@@ -2,11 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
-
 import Home from "./pages/Home";
 import AllMovies from "./pages/AllMovies";
 import MoviePage from "./pages/MoviePage";
-import MyList from "./pages/MyList";
 
 const router = createBrowserRouter([
   {
@@ -32,10 +30,6 @@ const router = createBrowserRouter([
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
-  },
-  {
-    path: "/mylist",
-    element: <MyList />,
   },
 ]);
 
