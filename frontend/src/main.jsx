@@ -1,14 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import App from "./App";
+import axios from "axios";
+import Home from "./pages/Home";
+import AllMovies from "./pages/AllMovies";
+import MoviePage from "./pages/MoviePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
+  },
+  {
+    path: "/movies",
+    element: <AllMovies />,
+    loader: () => {
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
+        .then((res) => res.data)
+        .catch((err) => console.error(err));
+    },
+  },
+  {
+    path: "/movies/:movieId",
+    element: <MoviePage />,
+    loader: ({ params }) => {
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies/${params.movieId}`)
+        .then((res) => res.data)
+        .catch((err) => console.error(err));
+    },
   },
 ]);
 
