@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <AllMovies />,
     loader: () => {
       return axios
-        .get("http://localhost:3310/api/movies")
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <MoviePage />,
     loader: ({ params }) => {
       return axios
-        .get(`http://localhost:3310/api/movies/${params.movieId}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies/${params.movieId}`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
