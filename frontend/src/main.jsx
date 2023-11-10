@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import AllMovies from "./pages/AllMovies";
 import MoviePage from "./pages/MoviePage";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
