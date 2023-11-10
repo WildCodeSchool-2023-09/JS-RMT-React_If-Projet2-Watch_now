@@ -14,12 +14,12 @@
 .contactContainer input,
 .contactContainer textarea {
   background-color: #090a0e;
-  text-align: center;
   margin: 1.1rem 0;
   height: 35px;
   padding: 10px auto;
   border-radius: 10px;
   border: #090a0e;
+  color: white;
 }
 
 .contactContainer ::placeholder {
@@ -41,5 +41,9 @@ button {
 .contactContainer H4 {
   display: flex;
   justify-content: center;
-  color: rgb(240, 6, 6);
+  color: white;
+}
+
+h4 {
+  font-size: x-large;
 }
