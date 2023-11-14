@@ -35,6 +35,4 @@
     transform: translateX(-67%);
     pointer-events: none;
   }
-  .nav-menu-modal a::after {
-  }
 }
