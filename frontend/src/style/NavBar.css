@@ -1,6 +1,6 @@
 /* MOBILE + TABLETTE*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .nav-logo {
     width: 20px;
     position: relative;
@@ -43,7 +43,7 @@
 
 /* DESKTOP */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .nav-logo {
     width: 20px;
     position: relative;
