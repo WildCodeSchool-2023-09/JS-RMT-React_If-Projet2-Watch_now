@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <AllMovies />,
     loader: () => {
       return axios
-        .get("http://localhost:3310/api/movies")
+        .get(`http://localhost:3310/api/movies`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
