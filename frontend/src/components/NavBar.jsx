@@ -9,7 +9,7 @@ function NavBar() {
       <NavLink to="/">
         <img src={mainLogo} className="nav-logo" alt="WatchNow_logo" />
       </NavLink>
-      <nav id="nav-menu">
+      <nav className="nav-menu">
         <NavLink to="/movies">Movies</NavLink>
       </nav>
     </div>
