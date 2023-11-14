@@ -8,7 +8,7 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import movieControllers module for handling movie-related operations
-const movieControllers = require("./controllers/movieControllers");
+
 // Route to get a list of movies
 router.get("/movies", (req, res) => {
   client
@@ -23,9 +23,9 @@ router.get("/movies", (req, res) => {
 });
 // Route to get a specific movie by ID
 // router.get("/movies/:id", movieControllers.read);
-router.get("/movies/:id", movieControllers.read, (req, res) => {
+router.get("/movies/:id", (req, res) => {
   client
-    .query("select * from movie where id = ?")
+    .query("select * from movie where id = ?", [req.params.id])
     .then(([movie]) => {
       if (movie[0] != null) {
         res.json(movie[0]);

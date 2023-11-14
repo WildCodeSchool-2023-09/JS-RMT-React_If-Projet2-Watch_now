@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  font-family: "Inter", sans-serif;
+  color: antiquewhite;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  background: #0f1014;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
