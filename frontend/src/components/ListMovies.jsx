@@ -5,7 +5,7 @@ import "../style/ListMovies.css";
 function ListMovies() {
   const movies = useLoaderData();
   return (
-    <div id="list-movies">
+    <div className="list-movies">
       {movies.map((movie) => {
         return (
           <div>
