@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <AllMovies />,
     loader: () => {
       return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
