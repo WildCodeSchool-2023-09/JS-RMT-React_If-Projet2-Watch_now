@@ -28,7 +28,7 @@ router.get("/movies/:id", (req, res) => {
     .query("select * from movie where id = ?", [req.params.id])
     .then(([movie]) => {
       if (movie[0] != null) {
-        res.json(movie[0]);
+        res.status(200).json(movie[0]);
       } else {
         res.sendStatus(404);
       }

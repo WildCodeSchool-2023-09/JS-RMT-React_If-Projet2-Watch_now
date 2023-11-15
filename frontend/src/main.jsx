@@ -5,31 +5,40 @@ import axios from "axios";
 import Home from "./pages/Home";
 import AllMovies from "./pages/AllMovies";
 import MoviePage from "./pages/MoviePage";
+import App from "./App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/movies",
-    element: <AllMovies />,
-    loader: () => {
-      return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
-        .then((res) => res.data)
-        .catch((err) => console.error(err));
-    },
-  },
-  {
-    path: "/movies/:movieId",
-    element: <MoviePage />,
-    loader: ({ params }) => {
-      return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies/${params.movieId}`)
-        .then((res) => res.data)
-        .catch((err) => console.error(err));
-    },
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "/movies",
+        element: <AllMovies />,
+        loader: () => {
+          return axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
+            .then((res) => res.data)
+            .catch((err) => console.error(err));
+        },
+      },
+      {
+        path: "/movies/:movieId",
+        element: <MoviePage />,
+        loader: ({ params }) => {
+          return axios
+            .get(
+              `${import.meta.env.VITE_BACKEND_URL}/api/movies/${params.movieId}`
+            )
+            .then((res) => res.data)
+            .catch((err) => console.error(err));
+        },
+      },
+    ],
   },
 ]);
 
