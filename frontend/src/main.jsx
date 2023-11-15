@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
+
+import App from "./App";
 import Home from "./pages/Home";
 import AllMovies from "./pages/AllMovies";
 import MoviePage from "./pages/MoviePage";
-import App from "./App";
+
+import "./Index.css";
 
 const router = createBrowserRouter([
   {

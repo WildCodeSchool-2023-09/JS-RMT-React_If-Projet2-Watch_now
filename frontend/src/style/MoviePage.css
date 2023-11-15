@@ -1,0 +1,101 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+.main-moviePage {
+  display: flex;
+  justify-content: center;
+  background-color: #fd013a;
+  overflow: hidden;
+}
+circle {
+  fill: none;
+  stroke: #fd013a;
+  stroke-width: 20px;
+  stroke-dasharray: 300;
+}
+.overlay {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 5% 10% 1fr 10% 5%;
+  grid-template-rows: 5% 40% 5% 40% 5%;
+  gap: 2% 2%;
+  height: 100vh;
+}
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Couleur du texte superposé */
+  text-align: center;
+  padding: 20px;
+}
+.poster-movie {
+  grid-area: 3 / 2 / 5 / 3;
+  width: 300px;
+}
+.title {
+  grid-area: 2 / 2 / 3 / 5;
+  padding-top: 150px;
+  font-size: 100px;
+}
+.description-movie {
+  grid-area: 4 / 3 / 5 / 4;
+  padding-top: 150px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.overlay-buttons {
+  grid-area: 3 / 2 / 4 / 5;
+  display: flex;
+  justify-content: space-around;
+  font-size: 36px;
+  padding-top: 50px;
+  padding-left: 350px;
+  padding-right: 850px;
+}
+.background-img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.background-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* Filtre par dessus image */
+.background-img div {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.vote-movie {
+  grid-area: 4 / 4 / 5 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vote-movie span {
+  position: absolute;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 10;
+  font-size: 40px;
+}
