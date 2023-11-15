@@ -5,6 +5,7 @@ import axios from "axios";
 import Home from "./pages/Home";
 import AllMovies from "./pages/AllMovies";
 import MoviePage from "./pages/MoviePage";
+import "./Index.css";
 
 const router = createBrowserRouter([
   {
