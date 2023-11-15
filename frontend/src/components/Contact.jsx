@@ -1,5 +1,10 @@
-/* eslint-disable no-restricted-syntax */
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ToastContainer, toast } from "react-toastify";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "react-toastify/dist/ReactToastify.css";
+
 import "./Contact.css";
 
 function Contact() {
@@ -26,14 +31,42 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Subject:", subject);
-    console.log("Message:", message);
+
+    const {
+      VITE_EMAILJS_SERVICE_ID,
+      VITE_EMAILJS_TEMPLATE_ID,
+      VITE_EMAILJS_PUBLIC_KEY,
+    } = import.meta.env;
+    const emailServiceId = VITE_EMAILJS_SERVICE_ID;
+    const emailTemplateId = VITE_EMAILJS_TEMPLATE_ID;
+    const emailPublicKey = VITE_EMAILJS_PUBLIC_KEY;
+
+    emailjs
+      .send(
+        emailServiceId,
+        emailTemplateId,
+        {
+          name,
+          email,
+          subject,
+          message,
+        },
+        emailPublicKey
+      )
+      .then((response) => {
+        console.info("E-mail envoyé avec succès", response);
+      })
+
+      .catch((error) => {
+        console.error("Erreur lors de l'envoi de l'e-mail :", error);
+      });
   };
+
+  const notify = () => toast("your message was taken into account!");
+
   return (
     <div className="contactContainer">
-      <h4>Contact from </h4>
+      <h4>Contact form</h4>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -69,7 +102,21 @@ function Contact() {
         />
 
         <div className="contactBtn">
-          <button type="submit">Send</button>
+          <button type="submit" onClick={notify}>
+            Send
+          </button>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </form>
     </div>
