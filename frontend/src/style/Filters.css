@@ -1,0 +1,29 @@
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.select-score,
+.select-year {
+  padding: 0 50px 0 0;
+  margin-left: 50px;
+  background-color: #0f1014f6;
+  border: none;
+  color: aliceblue;
+  overflow: hidden;
+}
+
+.select-genre {
+  padding-right: 5px;
+  background-color: #0f1014f6;
+  border: none;
+  color: aliceblue;
+  overflow: hidden;
+}
+
+.select-genre:active {
+  background-color: #0f1014f6;
+  border: none;
+}
