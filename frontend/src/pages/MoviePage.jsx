@@ -16,14 +16,12 @@ function MoviePage() {
         <h1 className="title">{movie.title}</h1>
         <div className="overlay-buttons">
           <h4>{movie.genre_ids}</h4>
-          <h5>{movie.release_date}</h5>
-          <h6>{movie.vote_average}</h6>
+          <h4>{movie.release_date}</h4>
+          <h4>{movie.vote_average}</h4>
         </div>
-        <img
-          className="poster-movie"
-          src={movie.poster_path}
-          alt={movie.title}
-        />
+        <div className="poster-movie">
+          <img src={movie.poster_path} alt={movie.title} />
+        </div>
         <p className="description-movie">{movie.overview}</p>
         <div className="vote-movie">
           <span>{movie.vote_average}</span>
