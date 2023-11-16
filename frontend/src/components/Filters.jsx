@@ -40,7 +40,7 @@ function Filters() {
         value={selectedGenre}
         onChange={(e) => setSelectedGenre(e.target.value)}
       >
-        <option value="">Genres</option>
+        <option value="">Genre</option>
         {genres.map((genre) => (
           <option key={genre.genre_ids} value={genre.genre_ids}>
             {genre.genre_ids}
@@ -68,7 +68,7 @@ function Filters() {
         value={selectedScore}
         onChange={(e) => setSelectedScore(e.target.value)}
       >
-        <option value="">Scores</option>
+        <option value="">Score</option>
         {scores.map((score) => (
           <option key={score.vote_average} value={score.vote_average}>
             {score.vote_average}
