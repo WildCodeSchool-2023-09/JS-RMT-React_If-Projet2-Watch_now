@@ -7,21 +7,6 @@ h4 {
   font-size: 12px;
   margin: 0;
 }
-.movie-ticket {
-  width: 100px;
-  text-align: left;
-  margin-left: 45px;
-}
-
-.date-movie {
-  margin-right: 35px;
-}
-
-.movie-ticket-desc {
-  display: flex;
-  align-items: left;
-  justify-content: flex-start;
-}
 
 /* MOBILE */
 
@@ -75,12 +60,37 @@ h4 {
   }
 }
 
+@media screen and (max-width: 840px) {
+  .date-movie,
+  .genre-movie,
+  .score-movie,
+  .title-movie {
+    display: none;
+  }
+}
+
 /* TABLETTE */
 
 @media screen and (min-width: 840px) {
   .list-movies {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .movie-ticket {
+    width: 100px;
+    text-align: left;
+    margin-left: 45px;
+  }
+
+  .date-movie {
+    margin-right: 35px;
+  }
+
+  .movie-ticket-desc {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
   }
 }
 
