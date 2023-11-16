@@ -8,11 +8,31 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import movieControllers module for handling movie-related operations
-
+const checkDelimiter = (query) => {
+  return query.includes("WHERE") ? "AND" : "WHERE";
+};
 // Route to get a list of movies
 router.get("/movies", (req, res) => {
+  let query = "select * from movie";
+  const value = [];
+
+  if (req.query.genre) {
+    query += ` ${checkDelimiter(query)} genre_ids = ?`;
+    value.push(req.query.genre);
+  }
+
+  if (req.query.score) {
+    query += ` ${checkDelimiter(query)} vote_average = ?`;
+    value.push(req.query.score);
+  }
+
+  if (req.query.year) {
+    query += ` ${checkDelimiter(query)} release_date = ?`;
+    value.push(req.query.year);
+  }
+
   client
-    .query("select * from movie")
+    .query(query, value)
     .then((result) => {
       res.status(200).json(result[0]);
     })

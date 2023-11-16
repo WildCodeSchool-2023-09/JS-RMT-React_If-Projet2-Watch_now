@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../style/Filters.css";
 
@@ -9,27 +10,56 @@ function Filters() {
   const [selectedGenre, setSelectedGenre] = useState("");
   const [selectedScore, setSelectedScore] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const getGenres = () => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/genres`)
       .then((res) => setGenres(res.data))
       .catch((error) => console.error(error));
-  }, []);
+  };
 
-  useEffect(() => {
+  const getScores = () => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/scores`)
       .then((res) => setScore(res.data))
       .catch((error) => console.error(error));
-  }, []);
+  };
 
-  useEffect(() => {
+  const getYear = () => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/year`)
       .then((res) => setYear(res.data))
       .catch((error) => console.error(error));
+  };
+
+  const checkDelimiter = (url) => {
+    return url.includes("?") ? "&" : "?";
+  };
+
+  useEffect(() => {
+    getGenres();
+    getScores();
+    getYear();
   }, []);
+
+  useEffect(() => {
+    let url = "/movies";
+
+    if (selectedGenre !== "") {
+      url += `${checkDelimiter(url)}genre=${selectedGenre}`;
+    }
+
+    if (selectedYear !== "") {
+      url += `${checkDelimiter(url)}year=${selectedYear}`;
+    }
+
+    if (selectedScore !== "") {
+      url += `${checkDelimiter(url)}score=${selectedScore}`;
+    }
+
+    navigate(url);
+  }, [selectedGenre, selectedYear, selectedScore]);
 
   return (
     <div className="filters">
@@ -38,7 +68,7 @@ function Filters() {
         name="genre"
         id="genre"
         value={selectedGenre}
-        onChange={(e) => setSelectedGenre(e.target.value)}
+        onChange={(event) => setSelectedGenre(event.target.value)}
       >
         <option value="">Genre</option>
         {genres.map((genre) => (

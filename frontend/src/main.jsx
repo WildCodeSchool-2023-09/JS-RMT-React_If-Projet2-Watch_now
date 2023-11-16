@@ -22,9 +22,11 @@ const router = createBrowserRouter([
       {
         path: "/movies",
         element: <AllMovies />,
-        loader: () => {
+        loader: ({ request }) => {
+          const query = new URL(request.url).search;
+
           return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies`)
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies${query}`)
             .then((res) => res.data)
             .catch((err) => console.error(err));
         },
