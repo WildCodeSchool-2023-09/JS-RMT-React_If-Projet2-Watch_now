@@ -66,7 +66,6 @@ function Filters() {
       <select
         className="select-genre"
         name="genre"
-        id="genre"
         value={selectedGenre}
         onChange={(event) => setSelectedGenre(event.target.value)}
       >
@@ -80,7 +79,6 @@ function Filters() {
       <select
         className="select-year"
         name="year"
-        id="year"
         value={selectedYear}
         onChange={(e) => setSelectedYear(e.target.value)}
       >
@@ -94,7 +92,6 @@ function Filters() {
       <select
         className="select-score"
         name="score"
-        id="score"
         value={selectedScore}
         onChange={(e) => setSelectedScore(e.target.value)}
       >
