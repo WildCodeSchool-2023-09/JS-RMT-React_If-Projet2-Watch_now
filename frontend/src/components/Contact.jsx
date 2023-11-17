@@ -54,20 +54,20 @@ function Contact() {
         emailPublicKey
       )
       .then((response) => {
-        console.info("E-mail envoyé avec succès", response);
+        toast.success("Your message was taken into account!", response);
       })
-
       .catch((error) => {
-        console.error("Erreur lors de l'envoi de l'e-mail :", error);
+        console.error("Error sending email:", error);
+        toast.error("Error sending email:", error);
       });
   };
 
-  const notify = () => toast("your message was taken into account!");
-
   return (
     <div className="contactContainer">
-      <h4>Contact form</h4>
+      <h1>Contact form</h1>
       <form onSubmit={handleSubmit}>
+        {" "}
+        {(name, email, subject, message)}
         <input
           type="text"
           name="name"
@@ -75,7 +75,6 @@ function Contact() {
           value={name}
           onChange={handleNameChange}
         />
-
         <input
           type="email"
           name="email"
@@ -83,7 +82,6 @@ function Contact() {
           value={email}
           onChange={handleEmailChange}
         />
-
         <input
           type="text"
           name="subject"
@@ -91,7 +89,6 @@ function Contact() {
           value={subject}
           onChange={handleSubjectChange}
         />
-
         <textarea
           name="message"
           placeholder="Write your message here"
@@ -100,11 +97,8 @@ function Contact() {
           value={message}
           onChange={handleMessageChange}
         />
-
         <div className="contactBtn">
-          <button type="submit" onClick={notify}>
-            Send
-          </button>
+          <button type="submit">Send</button>
           <ToastContainer
             position="top-center"
             autoClose={5000}

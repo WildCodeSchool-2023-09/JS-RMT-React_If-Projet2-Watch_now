@@ -49,11 +49,11 @@ button {
   transition: 0.6s;
 }
 
-h4 {
+h1 {
   font-size: x-large;
 }
 
-.contactContainer H4 {
+.contactContainer H1 {
   display: flex;
   justify-content: center;
   color: white;
