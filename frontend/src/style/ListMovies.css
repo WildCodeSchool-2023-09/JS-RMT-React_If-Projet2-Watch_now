@@ -3,7 +3,7 @@
   margin-bottom: 10px;
 }
 
-h4 {
+.title-movie {
   font-size: 12px;
   margin: 0;
 }
@@ -18,10 +18,6 @@ h4 {
   .movie {
     height: 350px;
   }
-  h1 {
-    font-size: 20px;
-    margin: 50px;
-  }
 
   .display-movies {
     margin-right: 50px;
@@ -29,7 +25,8 @@ h4 {
     margin-top: 0px;
   }
 
-  h5 {
+  .date-movie,
+  .score-movie {
     font-size: 15px;
     font-weight: lighter;
   }
@@ -43,10 +40,6 @@ h4 {
   .movie {
     height: 190px;
   }
-  h1 {
-    font-size: 20px;
-    margin: 50px;
-  }
 
   .display-movies {
     margin-right: 50px;
@@ -54,7 +47,8 @@ h4 {
     margin-top: 0px;
   }
 
-  h5 {
+  .date-movie,
+  .genre-movie {
     font-size: 12px;
     font-weight: lighter;
   }
@@ -108,7 +102,8 @@ h4 {
     margin-top: 200px;
   }
 
-  h5 {
+  .date-movie,
+  .genre-movie {
     font-size: 10px;
     font-weight: lighter;
   }
