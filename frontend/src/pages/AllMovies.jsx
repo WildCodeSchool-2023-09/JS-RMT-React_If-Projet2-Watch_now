@@ -3,6 +3,7 @@ import "../style/AllMovies.css";
 import NavBar from "../components/NavBar";
 import NavbarModal from "../components/NavbarModal";
 import ListMovies from "../components/ListMovies";
+import Filters from "../components/Filters";
 
 function AllMovies() {
   return (
@@ -11,6 +12,7 @@ function AllMovies() {
       <NavbarModal />
       <div className="display-movies">
         <h1>Liste des films</h1>
+        <Filters />
         <ListMovies />
       </div>
     </div>
