@@ -9,10 +9,10 @@
 .movie {
   border-radius: 5px;
   margin-bottom: 10px;
-  margin-right: 10px;
 }
 
 .title-movie {
+  text-align: left;
   font-size: 12px;
   margin: 0;
 }
@@ -81,7 +81,13 @@
   }
 
   .widget-movie-ticket {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 126px;
+    margin-right: 10px;
   }
 
   .date-movie {
@@ -90,6 +96,7 @@
 
   .movie-ticket-desc {
     display: flex;
+    text-align: left;
     align-items: left;
     justify-content: flex-start;
   }
