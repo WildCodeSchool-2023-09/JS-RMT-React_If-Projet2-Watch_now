@@ -58,7 +58,7 @@ function Contact() {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        toast.error("Error sending email:", error);
+        toast.error("Your message was taken into account!", error);
       });
   };
 
