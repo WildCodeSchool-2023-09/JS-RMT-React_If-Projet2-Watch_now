@@ -85,6 +85,7 @@
     display: flex;
     align-items: left;
     justify-content: flex-start;
+    margin-bottom: 30px;
   }
 }
 
@@ -102,9 +103,8 @@
     margin-top: 200px;
   }
 
-  .date-movie,
-  .genre-movie {
-    font-size: 10px;
-    font-weight: lighter;
+  .title-movie {
+    width: 120px;
+    margin-bottom: 10px;
   }
 }

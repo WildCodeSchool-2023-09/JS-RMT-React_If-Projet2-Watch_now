@@ -7,7 +7,7 @@ function AllMovies() {
   return (
     <div>
       <div className="display-movies">
-        <h1>Liste des films</h1>
+        <h1>Movies Catalogue</h1>
         <Filters />
         <ListMovies />
       </div>
