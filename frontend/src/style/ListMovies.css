@@ -4,8 +4,8 @@
 }
 
 .title-movie {
+  text-align: left;
   font-size: 12px;
-  margin: 0;
 }
 
 /* MOBILE */
@@ -20,8 +20,11 @@
   }
 
   .display-movies {
-    margin-right: 50px;
-    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
     margin-top: 0px;
   }
 
@@ -39,12 +42,15 @@
   }
   .movie {
     height: 190px;
+    margin: 5px;
   }
 
   .display-movies {
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 
   .date-movie,
@@ -72,9 +78,13 @@
   }
 
   .movie-ticket {
-    width: 100px;
-    text-align: left;
-    margin-left: 45px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 126px;
+    margin-right: 20px;
   }
 
   .date-movie {
@@ -83,9 +93,9 @@
 
   .movie-ticket-desc {
     display: flex;
+    text-align: left;
     align-items: left;
     justify-content: flex-start;
-    margin-bottom: 30px;
   }
 }
 
@@ -94,17 +104,20 @@
 @media screen and (min-width: 1400px) {
   .list-movies {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
 
   .display-movies {
-    margin-right: 130px;
-    margin-left: 130px;
-    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
   }
 
-  .title-movie {
-    width: 120px;
-    margin-bottom: 10px;
+  .date-movie,
+  .genre-movie {
+    font-size: 10px;
+    font-weight: lighter;
   }
 }
