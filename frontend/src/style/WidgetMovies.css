@@ -28,12 +28,6 @@
     height: 350px;
   }
 
-  .display-movies {
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 0px;
-  }
-
   .date-movie,
   .score-movie {
     font-size: 15px;
@@ -45,15 +39,6 @@
   .widget-movies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .movie {
-    height: 100px;
-  }
-
-  .display-movies {
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 0px;
   }
 
   .date-movie,
@@ -87,7 +72,7 @@
     align-content: center;
     flex-wrap: wrap;
     width: 126px;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .date-movie {
@@ -114,12 +99,6 @@
   .widget-movies {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-  }
-
-  .display-movies {
-    margin-right: 350px;
-    margin-left: 350px;
-    margin-top: 200px;
   }
 
   .date-movie,
