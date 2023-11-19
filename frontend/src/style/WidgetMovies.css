@@ -1,5 +1,6 @@
 .show-more-button,
 .show-more-link {
+  margin-top: 30px;
   font-weight: bolder;
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -9,6 +10,7 @@
 .movie {
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .title-movie {
@@ -43,6 +45,7 @@
 
   .date-movie,
   .genre-movie {
+    margin-top: 5px;
     font-size: 12px;
     font-weight: lighter;
   }

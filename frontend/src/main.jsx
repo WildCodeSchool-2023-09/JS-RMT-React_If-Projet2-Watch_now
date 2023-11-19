@@ -18,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+        loader: ({ request }) => {
+          const query = new URL(request.url).search;
+
+          return axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/movies${query}`)
+            .then((res) => res.data)
+            .catch((err) => console.error(err));
+        },
       },
       {
         path: "/movies",
