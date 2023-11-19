@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useLoaderData, Link } from "react-router-dom";
-import "../style/WidgetMovies.css";
+import "../style/WidgetMoviesBest.css";
 
-function WidgetMovies() {
+function WidgetMoviesBest() {
   const movies = useLoaderData();
-  const [visibleMovies, setVisibleMovies] = useState(7);
+  const [visibleMovies, setVisibleMovies] = useState(6);
   const [clickCount, setClickCount] = useState(0);
 
   const handleShowMore = () => {
-    setVisibleMovies((prevVisibleMovies) => prevVisibleMovies + 7);
-
+    setVisibleMovies((prevVisibleMovies) => prevVisibleMovies + 6);
     setClickCount((prevClickCount) => prevClickCount + 1);
   };
 
@@ -18,10 +17,15 @@ function WidgetMovies() {
     return <div>Error: Movies data is not in the expected format.</div>;
   }
 
+  // Triez les films par vote_average de manière décroissante
+  const sortedMovies = [...movies].sort(
+    (a, b) => b.vote_average - a.vote_average
+  );
+
   return (
     <div className="widget">
       <div className="widget-movies">
-        {movies.slice(0, visibleMovies).map((movie) => {
+        {sortedMovies.slice(0, visibleMovies).map((movie) => {
           return (
             <div key={movie.id}>
               <div className="widget-movie-ticket">
@@ -62,4 +66,4 @@ function WidgetMovies() {
   );
 }
 
-export default WidgetMovies;
+export default WidgetMoviesBest;

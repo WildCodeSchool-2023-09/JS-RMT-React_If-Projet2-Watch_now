@@ -19,6 +19,13 @@
   margin: 0;
 }
 
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* MOBILE */
 
 @media screen and (max-width: 490px) {
@@ -43,6 +50,10 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .movie {
+    margin-right: 20px;
+  }
+
   .date-movie,
   .genre-movie {
     margin-top: 5px;
@@ -65,7 +76,7 @@
 @media screen and (min-width: 840px) {
   .widget-movies {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .widget-movie-ticket {
@@ -93,15 +104,9 @@
 /* DESKTOP */
 
 @media screen and (min-width: 1400px) {
-  .widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .widget-movies {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .date-movie,
