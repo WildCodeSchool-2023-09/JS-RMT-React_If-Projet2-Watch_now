@@ -1,3 +1,28 @@
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  font-family: "Inter", sans-serif;
+  color: antiquewhite;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f1014;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 h1 {
   margin-bottom: 100px;
 }
@@ -5,7 +30,5 @@ h1 {
 li {
   list-style: none;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+
+
