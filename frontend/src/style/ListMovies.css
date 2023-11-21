@@ -1,0 +1,110 @@
+.movie {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.title-movie {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 490px) {
+  .list-movies {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .movie {
+    height: 350px;
+  }
+
+  .display-movies {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+
+  .date-movie,
+  .score-movie {
+    font-size: 15px;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .list-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .movie {
+    height: 190px;
+  }
+
+  .display-movies {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+
+  .date-movie,
+  .genre-movie {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .date-movie,
+  .genre-movie,
+  .score-movie,
+  .title-movie {
+    display: none;
+  }
+}
+
+/* TABLETTE */
+
+@media screen and (min-width: 840px) {
+  .list-movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .movie-ticket {
+    width: 100px;
+    text-align: left;
+    margin-left: 45px;
+  }
+
+  .date-movie {
+    margin-right: 35px;
+  }
+
+  .movie-ticket-desc {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1400px) {
+  .list-movies {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .display-movies {
+    margin-right: 130px;
+    margin-left: 130px;
+    margin-top: 200px;
+  }
+
+  .date-movie,
+  .genre-movie {
+    font-size: 10px;
+    font-weight: lighter;
+  }
+}
