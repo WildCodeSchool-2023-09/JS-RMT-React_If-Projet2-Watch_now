@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import NavbarModal from "./components/NavbarModal";
+import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
 import "./App.css";
@@ -13,6 +14,7 @@ function App() {
       <NavbarModal />
       <Outlet />
       <Contact />
+      <Footer />
     </>
   );
 }

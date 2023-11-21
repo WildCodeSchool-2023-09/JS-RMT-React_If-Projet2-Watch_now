@@ -4,7 +4,6 @@ import WidgetMovies from "../components/WidgetMoviesRecent";
 import WidgetMoviesBest from "../components/WidgetMoviesBest";
 
 import "../Index.css";
-import "../style/Home.css";
 
 function Home() {
   return (

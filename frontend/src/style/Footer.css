@@ -1,0 +1,17 @@
+.footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  background-color: #090a0e;
+  width: 100%;
+  position: absolute;
+}
+
+.text-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
