@@ -11,7 +11,7 @@ function AllMovies() {
       <NavBar />
       <NavbarModal />
       <div className="display-movies">
-        <h1>Movies Catalogue</h1>
+        <h3>Movies Catalogue</h3>
         <Filters />
         <ListMovies />
       </div>

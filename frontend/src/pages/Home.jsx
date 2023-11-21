@@ -4,15 +4,14 @@ import WidgetMovies from "../components/WidgetMoviesRecent";
 import WidgetMoviesBest from "../components/WidgetMoviesBest";
 
 import "../Index.css";
-import "../style/Home.css";
 
 function Home() {
   return (
     <div>
       <div className="display-movies">
-        <h1>New entries this week</h1>
+        <h3>New entries this week</h3>
         <WidgetMovies />
-        <h1>Best movies by votes</h1>
+        <h3>Best movies by votes</h3>
         <WidgetMoviesBest />
       </div>
     </div>

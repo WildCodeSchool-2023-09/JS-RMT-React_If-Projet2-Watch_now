@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import NavbarModal from "./components/NavbarModal";
 import Contact from "./components/Contact";
 
-import "./App.css";
+import "./Index.css";
 
 function App() {
   return (
