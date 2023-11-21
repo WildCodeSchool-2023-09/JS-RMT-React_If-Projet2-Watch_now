@@ -1,31 +1,40 @@
+.show-more-button,
+.show-more-link {
+  margin-top: 30px;
+  font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fe0a3d;
+  text-decoration: none;
+}
 .movie {
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .title-movie {
   text-align: left;
   font-size: 12px;
+  margin: 0;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* MOBILE */
 
 @media screen and (max-width: 490px) {
-  .list-movies {
+  .widget-movies {
     display: grid;
     grid-template-columns: 1fr;
   }
   .movie {
     height: 350px;
-  }
-
-  .display-movies {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-top: 0px;
   }
 
   .date-movie,
@@ -36,25 +45,18 @@
 }
 
 @media screen and (min-width: 490px) {
-  .list-movies {
+  .widget-movies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .movie {
-    height: 190px;
-    margin: 5px;
-  }
 
-  .display-movies {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  .movie {
+    margin-right: 20px;
   }
 
   .date-movie,
   .genre-movie {
+    margin-top: 5px;
     font-size: 12px;
     font-weight: lighter;
   }
@@ -72,12 +74,12 @@
 /* TABLETTE */
 
 @media screen and (min-width: 840px) {
-  .list-movies {
+  .widget-movies {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
-  .movie-ticket {
+  .widget-movie-ticket {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -102,17 +104,9 @@
 /* DESKTOP */
 
 @media screen and (min-width: 1400px) {
-  .list-movies {
+  .widget-movies {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-  }
-
-  .display-movies {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .date-movie,
