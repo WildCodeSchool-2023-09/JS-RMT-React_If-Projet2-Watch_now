@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "react-toastify/dist/ReactToastify.css";
 
-import "./Contact.css";
+import "../style/Contact.css";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -64,10 +64,8 @@ function Contact() {
 
   return (
     <div className="contactContainer">
-      <h1>Contact form</h1>
+      <h3>Contact form</h3>
       <form onSubmit={handleSubmit}>
-        {" "}
-        {(name, email, subject, message)}
         <input
           type="text"
           name="name"

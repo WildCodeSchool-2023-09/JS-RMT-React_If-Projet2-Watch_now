@@ -49,10 +49,6 @@ button {
   transition: 0.6s;
 }
 
-h1 {
-  font-size: x-large;
-}
-
 .contactContainer H1 {
   display: flex;
   justify-content: center;
