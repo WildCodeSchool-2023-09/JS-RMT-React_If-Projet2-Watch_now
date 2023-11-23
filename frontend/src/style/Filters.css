@@ -1,0 +1,30 @@
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.select-score,
+.select-year {
+  position: relative;
+  border: 1px solid #fe0a3f00;
+  border-radius: 5px;
+  padding: 0 50px 0 0;
+  margin-left: 50px;
+  background-color: #0f1014f6;
+  border: none;
+  color: aliceblue;
+  overflow: hidden;
+}
+
+.select-genre {
+  position: relative;
+  border: 1px solid #fe0a3f00;
+  border-radius: 5px;
+  padding-right: 5px;
+  background-color: #0f1014f6;
+  border: none;
+  color: aliceblue;
+  overflow: hidden;
+}
